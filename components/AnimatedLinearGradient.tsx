@@ -47,9 +47,9 @@ const AnimatedLinearGradient = ({ colors }: Props) => {
     startAnimation();
   });
 
-  // TO DO: Get color strings from interpolated colors
+  // Get interpolated colors
   const getInterpolatedColors = () => {
-    const renderColors: any[] = [];
+    const renderColors: Array<string[]> = [];
     while (renderColors.length < 3) {
       renderColors.push(
         colors
@@ -66,6 +66,11 @@ const AnimatedLinearGradient = ({ colors }: Props) => {
     return interpolatedColors;
   }
 
+  // To do: Transform interpolated colors to color strings
+  const getAnimatedColors = () => {
+
+  }
+
   return (
     <Animated.View>
       <LinearGradient 
@@ -74,7 +79,7 @@ const AnimatedLinearGradient = ({ colors }: Props) => {
           width,
           height
         }}
-        // should load animated colors
+        // Should load animated colors instead
         colors={colors}
         start={START_POINT}
         end={END_POINT}
