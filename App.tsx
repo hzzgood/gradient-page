@@ -1,11 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Animated, Button } from 'react-native';
+import AnimatedLinearGradient from './components/AnimatedLinearGradient';
+
+const COLOR1 = '#00BF6F';
+const COLOR2 = '#FDDA25';
+const COLOR3 = '#71DBD4';
+
+const COLORS = [COLOR1, COLOR2, COLOR3];
 
 export default function App() {
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <AnimatedLinearGradient colors={COLORS} />
     </View>
   );
 }
